@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Notes</title>
+    <style> 
+        #header{
+            background-color:rgb(33, 44, 255);
+            color:white;
+            padding:10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+        } 
+        #header h1{
+            margin-left: 20px;
+        }
+        ul{
+            list-style: none;
+            margin:0px;
+            padding:5px;
+            display: flex; 
+            gap:3px;
+            color: aliceblue;
+        } 
+        li{
+            padding: 5px 10px;
+            color: white;
+        } 
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        a.view-notes{
+            background-color: rgb(254, 245, 175);
+            color: black;
+            border-radius: 5px;
+            padding: 3px 8px;
+        }
+
+
+
+        #create-body{
+            text-align:center;
+            margin-top: 150px; 
+        } 
+        .input-title{
+            width: 300px;
+            height: 20px;
+            font-size: 16px;
+            margin-bottom: 10px;    
+            border:1px solid black;
+            border-radius:5px;
+            padding:5px;
+        }
+        .input-content{
+            width: 400px;
+            height: 240px;
+            font-size: 15px;
+            margin-bottom: 10px;    
+            border:1px solid black;
+            border-radius:5px;
+            padding:5px;
+        }
+        #button{
+            background-color: rgb(33, 44, 255);
+            color: rgb(249, 255, 84);
+            border:none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .button{
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        } 
+        button:hover{ 
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1>NoteVault</h1>
+        <ul>
+            <li class="home">
+                <a href="index.html">Home</a>
+            </li>
+            <li class="view-notes">
+                <a class="view-notes" href="view-notes.html">View Notes</a>
+            </li>
+            <li class="create-note">
+                <a class="create-notes" href="create-notes.html">Create Note</a>
+            </li>
+        </ul>
+    </div>
+
+    <div id="create-body">
+        <h1>Edit/Update Your Note</h1>
+        
+        <input id="title" class="input-title" type="text" placeholder="Enter Title...">
+        <br>
+        <textarea id="content" class="input-content" type="text" placeholder="Enter Content..."></textarea>
+        <br><br>
+
+        <p id="msg"></p>
+
+        <div class="button">
+            <button id="button" type="button" onclick="updatenote()"> Edit Note</button>
+            <button id="button" type="button" onclick="back()"> Back</button>
+        </div>
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

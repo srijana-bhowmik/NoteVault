@@ -1,0 +1,44 @@
+       #header{
+            background-color:rgb(33, 44, 255);
+            color:white;
+            padding:10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+        } 
+        #header h1{
+            margin-left: 20px;
+        }
+        ul{
+            list-style: none;
+            margin:0px;
+            padding:5px;
+            display: flex; 
+            gap:3px;
+            color: aliceblue;
+        } 
+        li{
+            padding: 5px 10px;
+            color: white;
+        } 
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        a.home{
+            background-color: rgb(254, 245, 175);
+            color: black;
+            border-radius: 5px;
+            padding: 3px 8px;
+        }
+        #main-body{
+            text-align:center;
+            justify-content: center;
+            text-align: center;
+            margin-top: 200px;
+        } 
+        

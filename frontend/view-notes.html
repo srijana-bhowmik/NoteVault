@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Notes</title>
+    <style>
+        #header{
+            background-color:rgb(33, 44, 255);
+            color:white;
+            padding:10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+        } 
+        #header h1{
+            margin-left: 20px;
+        }
+        ul{
+            list-style: none;
+            margin:0px;
+            padding:5px;
+            display: flex; 
+            gap:3px;
+            color: aliceblue;
+        } 
+        li{
+            padding: 5px 10px;
+            color: white;
+        } 
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        a.view-notes{
+            background-color: rgb(254, 245, 175);
+            color: black;
+            border-radius: 5px;
+            padding: 3px 8px;
+        }
+
+
+
+        #view-body{
+            text-align:center;
+            margin-top: 150px; 
+        } 
+        ul#notes-list{
+            list-style-type: none;
+            padding: 40px 70px 40px 70px;
+            gap:60px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            box-shadow: 5px 5px 8px 8px rgba(0.3, 0.3, 0.3,0.3);
+            align-items: center;
+            margin: 30px ; 
+            background-color:rgb(251, 248, 239);
+        }
+        
+        #notes-list li{
+            background-color: rgb(252, 254, 206);
+            border-top: 1px solid rgb(0, 0, 0);
+            border-left: 1px solid rgb(0, 0, 0);
+            border-radius: 8px;
+            padding: 10px;
+            text-align: center; 
+            margin: 10px auto; 
+            max-width: 400px;
+            justify-content: center;
+            box-shadow: 5px 5px 8px rgba(0, 0.3, 0.3,0.3);
+            color: black;
+        }
+        #notes-list li h3{
+            color: rgb(0, 0, 0);
+            font-size: large;
+        }
+        #notes-list li button{
+            border:none;
+            padding: 4px 10px;
+            border-radius: 5px;
+            font-size: 13px;
+            cursor: pointer;
+            gap: 5px;
+        }
+        #notes-list li #buttons{
+            display: flex;
+            justify-content: center;
+            gap: 13px;
+            margin-top: 10px;
+        }
+        #notes-list li button:hover{ 
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+        #notes-list li #delete{
+            background-color: rgb(205, 0, 0);
+            color: white;
+            border: 1px solid rgb(68, 0, 0);
+            font-weight: 700;   
+        }
+        #notes-list li #edit{
+            background-color:rgb(255, 242, 0);
+            color: rgb(0, 13, 255);
+            font-weight: 700;   
+            border: 1px solid rgb(80, 80, 0);
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1>NoteVault</h1>
+        <ul>
+            <li class="home">
+                <a href="index.html">Home</a>
+            </li>
+            <li class="view-notes">
+                <a  class="view-notes" href="view-notes.html">View Notes</a>
+            </li>
+            <li class="create-note">
+                <a href="create-notes.html">Create Note</a>
+            </li>
+        </ul>
+    </div>
+
+    <div id="view-body">
+        <h1>View Your Notes</h1>
+        <ul id="notes-list"></ul> 
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
